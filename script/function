@@ -1,0 +1,30 @@
+function set-text-color-variable()
+{
+  #Text color setting
+  NC="\033[0m" #Color reset
+  BLACK="\033[0;30m"
+  RED="\033[0;31m"
+  GREEN="\033[0;32m"
+  YELLOW="\033[0;33m"
+  BLUE="\033[0;34m"
+  PURPLE="\033[0;35m"
+  CYAN="\033[0;36m"
+  WHITE="\033[0;37m"
+}
+
+function create_topic_dir ()
+{
+  #建立指定工作目錄
+  dir_detector=0
+  ls ${1} &> /dev/null || dir_detector=1
+
+  [ "${dir_detector}" == "0" ] && echo -e " [${GREEN}●${NC}] ${1} exist."
+  [ "${dir_detector}" == "1" ] && sudo mkdir -p ${1} 2> /dev/null && echo -e " [${GREEN}●${NC}] ${1} created."
+
+  #賦予 root 以外使用者寫入權限
+  access_detector=0
+  ls -al ${1} | awk '{ print $9,$1 }' | grep '^. drwxr-xrwx' &> /dev/null || access_detector=1
+
+  [ "${dir_detector}" == "0" ] && echo -e " [${GREEN}●${NC}] ${1} mode already is 757."
+  [ "${dir_detector}" == "1" ] && sudo chmod 757 ${1} 2> /dev/null && echo -e " [${GREEN}●${NC}] ${1} mode is set 757."
+}

@@ -1,0 +1,26 @@
+#!/bin/bash
+#Purpose: CKA s4 environment preprocess
+#Create-Date: 2023-07-06
+
+#Variable
+source https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/function
+set-text-color-variable
+target_namespace="default"
+object="svc"
+object_name="service-am-i-ready"
+object_replicas=2
+yaml_path=https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/
+yaml="s4_preprocess"
+
+#Main program
+#檢查並建立 namespace
+namespace_detector=0
+kubectl get ns ${target_namespace} > /dev/null 2>&1 || namespace_detector=1
+[ "${namespace_detector}" == "0" ] && echo -e " [${GREEN}●${NC}] ${target_namespace} already exist."
+[ "${namespace_detector}" == "1" ] && kubectl create ns ${target_namespace} > /dev/null 2>&1 && echo -e " [${GREEN}●${NC}] ${target_namespace} created."
+
+#檢查並建立 object
+object_detector=0
+kubectl get ${object} -n ${target_namespace} 2>&1 | grep "${object_name}" > /dev/null || object_detector=1
+[ "${object_detector}" == "0" ] && echo -e " [${GREEN}●${NC}] ${object_name} already exist."
+[ "${object_detector}" == "1" ] && kubectl apply -f ${yaml_path}${yaml}.yaml > /dev/null 2>&1 && echo -e " [${GREEN}●${NC}] ${object}/${object_name} created."
