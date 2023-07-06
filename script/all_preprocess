@@ -1,0 +1,17 @@
+#!/bin/bash
+#Purpose: CKA all environment preprocess
+#Create-Date: 2023-07-06
+
+#Variable
+source ~/bin/preprocess_function
+
+#Main program
+set-text-color-variable
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s1_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s2_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s3_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s4_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s5_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s6_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s7_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s8_preprocess' | bash

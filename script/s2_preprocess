@@ -5,7 +5,6 @@
 #Variable
 ls ~/bin/preprocess_function &> /dev/null || wget -q 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess_function' -O ~/bin/preprocess_function
 source ~/bin/preprocess_function
-set-text-color-variable
 target_namespace=""
 object=""
 object_name=""
@@ -14,6 +13,8 @@ yaml_path=~/
 yaml=""
 
 #Main program
+set-text-color-variable
+echo -e "${YELLOW}s2 preprocess:${NC}"
 #找出 control-plane
 taint_detector=0
 target_node=$(kubectl get nodes -o wide | grep 'control-plane' | awk '{ print $1 }' | head -n 1)
