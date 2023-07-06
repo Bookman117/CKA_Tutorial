@@ -3,7 +3,8 @@
 #Create-Date: 2023-07-06
 
 #Variable
-source https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/function
+ls ~/bin/preprocess_function &> /dev/null || wget 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess_function' -o preprocess_function
+source ~/bin/preprocess_function
 set-text-color-variable
 target_namespace="project-c13"
 object="sts"
