@@ -1,0 +1,25 @@
+#!/bin/bash
+#Purpose: CKA s2 environment preprocess
+#Create-Date: 2023-07-06
+
+#Variable
+ls ~/bin/preprocess_function &> /dev/null || wget -q 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess_function' -O ~/bin/preprocess_function
+source ~/bin/preprocess_function
+target_namespace=""
+object=""
+object_name=""
+object_replicas=""
+yaml_path=~/
+yaml=""
+
+#Main program
+set-text-color-variable
+echo -e "${YELLOW}s12 preprocess:${NC}"
+#找出 control-plane
+taint_detector=0
+target_node=$(kubectl get nodes -o wide | grep 'control-plane' | awk '{ print $1 }' | head -n 1)
+kubectl describe node ${target_node} | grep 'Taints:' | grep 'NoSchedule' &> /dev/null && taint_detector=1
+
+#檢查並移除 NoSchedule Taint
+[ "${taint_detector}" == "0" ] && echo -e " [${GREEN}●${NC}] ${target_node} already untaint."
+[ "${taint_detector}" == "1" ] && kubectl taint node ${target_node} node-role.kubernetes.io/control-plane:NoSchedule- &> /dev/null && echo -e " [${GREEN}●${NC}] ${target_node} untaint."
