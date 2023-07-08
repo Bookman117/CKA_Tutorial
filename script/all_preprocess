@@ -6,7 +6,6 @@
 source ~/bin/preprocess_function
 
 #Main program
-set-text-color-variable
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s1_preprocess' | bash
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s2_preprocess' | bash
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s3_preprocess' | bash
@@ -15,3 +14,5 @@ curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s5
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s6_preprocess' | bash
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s7_preprocess' | bash
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s8_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s9_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s10_preprocess' | bash
