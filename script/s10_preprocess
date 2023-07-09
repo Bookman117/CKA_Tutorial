@@ -9,7 +9,7 @@ target_namespace="project-hamster"
 object=""
 object_name=""
 object_replicas=0
-yaml_path=https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/
+yaml_path=https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/yaml/
 yaml=""
 
 #Main program

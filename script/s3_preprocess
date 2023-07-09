@@ -9,7 +9,7 @@ target_namespace="project-c13"
 object="sts"
 object_name="o3db"
 object_replicas=2
-yaml_path=https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/
+yaml_path=https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/yaml/
 yaml="s3_preprocess"
 
 #Main program
