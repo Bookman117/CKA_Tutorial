@@ -3,6 +3,7 @@
 #Create-Date: 2023-07-06
 
 #Variable
+wget -q 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cka_function' -O ~/bin/preprocess_function
 source ~/bin/preprocess_function
 
 #Main program
