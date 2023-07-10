@@ -16,7 +16,7 @@ yaml=""
 set-text-color-variable
 echo -e "${YELLOW}s1 score:${NC}"
 context_list=$(kubectl config get-contexts -o name)
-target_number=$(cat /opt/course/1/contexts | wc -l)
+target_number=$(cat /opt/course/1/contexts 2> /dev/null | wc -l)
 current_number=$(kubectl config get-contexts -o name | wc -l)
 
 [ "${target_number}" == "${current_number}" ] && for list in ${context_list}
