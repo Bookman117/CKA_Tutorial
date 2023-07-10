@@ -1,0 +1,12 @@
+#!/bin/bash
+#Purpose: CKA all environment preprocess
+#Create-Date: 2023-07-06
+
+#Variable
+wget -q 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cka_function' -O ~/bin/preprocess_function
+source ~/bin/preprocess_function
+
+#Main program
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s1_cleanups' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s2_cleanups' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s3_cleanups' | bash
