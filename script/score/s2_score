@@ -1,0 +1,29 @@
+#!/bin/bash
+#Purpose: CKA s1 environment preprocess
+#Create-Date: 2023-07-06
+
+#Variable
+ls ~/bin/cka_function &> /dev/null || wget -q 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cka_function' -O ~/bin/cka_function
+source ~/bin/cka_function
+target_namespace="default"
+object="pod"
+object_name="pod1"
+object_replicas=""
+yaml_path=~/
+yaml=""
+
+#Main program
+target_container_name=pod1-container
+set-text-color-variable
+echo -e "${YELLOW}s2 score:${NC}"
+
+#Check pod name
+kubectl get pod | grep 'pod1' &> /dev/null && echo -e " [${GREEN}●${NC}] pod name correct." || echo -e " [${RED}●${NC}] pod name incorrect."
+
+#Check target node
+target_node=$(kubectl get nodes | grep 'control-plane' | awk '{ print $1 }' 2> /dev/null)
+kubectl get pods -n default -o wide | grep 'pod1' | grep ${target_node} &> /dev/null && echo -e " [${GREEN}●${NC}] deploy node correct." || echo -e " [${RED}●${NC}] deploy node incorrect."
+
+#Check container name
+check_container_name=$(kubectl get pods pod1 -o jsonpath='{.spec.containers[*].name}{"\n"}' 2> /dev/null)
+[ "${target_container_name}" == "${check_container_name}" ] && echo -e " [${GREEN}●${NC}] container name correct." || echo -e " [${RED}●${NC}] container name incorrect."
