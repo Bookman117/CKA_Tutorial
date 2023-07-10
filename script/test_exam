@@ -1,0 +1,20 @@
+#!/bin/bash
+#Purpose: CKA environment cleanup & rebuild
+#Create-Date: 2023-07-06
+
+#Variable
+wget -q 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cka_function' -O ~/bin/preprocess_function
+source ~/bin/preprocess_function
+set-text-color-variable
+
+#Main program
+echo "environment cleanups"
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s1_cleanups' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s2_cleanups' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s3_cleanups' | bash
+
+echo "environment preprocess"
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/s1_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/s2_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/s3_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/s4_preprocess' | bash
