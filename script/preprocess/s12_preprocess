@@ -20,6 +20,6 @@ taint_detector=0
 target_node=$(kubectl get nodes -o wide | grep 'control-plane' | awk '{ print $1 }' | head -n 1)
 kubectl describe node ${target_node} | grep 'Taints:' | grep 'NoSchedule' &> /dev/null && taint_detector=1
 
-#檢查並移除 NoSchedule Taint
+#檢查並賦予 NoSchedule Taint
 [ "${taint_detector}" == "1" ] && echo -e " [${GREEN}●${NC}] ${target_node} already tainted."
 [ "${taint_detector}" == "0" ] && kubectl taint node ${target_node} node-role.kubernetes.io/control-plane:NoSchedule &> /dev/null && echo -e " [${GREEN}●${NC}] ${target_node} tainted."

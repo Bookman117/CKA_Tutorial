@@ -1,0 +1,22 @@
+#!/bin/bash
+#Purpose: CKA s6 environment preprocess
+#Create-Date: 2023-07-06
+
+#Variable
+ls ~/bin/cka_function &> /dev/null || wget -q 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cka_function' -O ~/bin/cka_function
+source ~/bin/cka_function
+target_namespace="project-tiger"
+object=""
+object_name=""
+object_replicas=""
+yaml_path=~/
+yaml=""
+
+#Main program
+set-text-color-variable
+echo -e "${YELLOW}s6 cleanups:${NC}"
+#檢查並建立 namespace
+namespace_detector=0
+kubectl get ns ${target_namespace} > /dev/null 2>&1 && namespace_detector=1
+[ "${namespace_detector}" == "0" ] && echo -e " [${GREEN}●${NC}] ${target_namespace} not exist."
+[ "${namespace_detector}" == "1" ] && kubectl delete ns ${target_namespace} > /dev/null 2>&1 && echo -e " [${GREEN}●${NC}] ${target_namespace} deleted."
