@@ -10,3 +10,11 @@ source ~/bin/preprocess_function
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s1_cleanups' | bash
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s2_cleanups' | bash
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s3_cleanups' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s4_cleanups' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s5_cleanups' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s6_cleanups' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s7_cleanups' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s8_cleanups' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s10_cleanups' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s11_cleanups' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s12_cleanups' | bash
