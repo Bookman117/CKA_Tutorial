@@ -16,3 +16,5 @@ curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s7
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s8_preprocess' | bash
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s9_preprocess' | bash
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s10_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s11_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s12_preprocess' | bash
