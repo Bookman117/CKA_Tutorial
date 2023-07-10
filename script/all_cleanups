@@ -6,4 +6,4 @@
 source ~/bin/preprocess_function
 
 #Main program
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s1_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/s1_cleanups' | bash

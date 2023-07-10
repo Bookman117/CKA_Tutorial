@@ -33,7 +33,7 @@ function remove_topic_dir ()
 {
   #建立指定工作目錄
   dir_detector=0
-  ls ${1} &> /dev/null || dir_detector=1
+  ls ${1} &> /dev/null && dir_detector=1
 
   [ "${dir_detector}" == "0" ] && echo -e " [${GREEN}●${NC}] ${1} not exist."
   [ "${dir_detector}" == "1" ] && sudo rm -r ${1} 2> /dev/null && echo -e " [${GREEN}●${NC}] ${1} removed."
