@@ -21,7 +21,7 @@ echo -e "${YELLOW}s2 score:${NC}"
 kubectl get pod | grep 'pod1' &> /dev/null && echo -e " [${GREEN}●${NC}] pod name correct." || echo -e " [${RED}●${NC}] pod name incorrect."
 
 #Check target node
-target_node=$(kubectl get nodes | grep 'control-plane' | awk '{ print $1 }' 2> /dev/null)
+target_node=$(kubectl get nodes | grep 'control-plane' | awk '{ print $1 }' | head -n 1 2> /dev/null)
 kubectl get pods -n default -o wide | grep 'pod1' | grep ${target_node} &> /dev/null && echo -e " [${GREEN}●${NC}] deploy node correct." || echo -e " [${RED}●${NC}] deploy node incorrect."
 
 #Check container name
