@@ -17,10 +17,8 @@ target_container_name=pod1-container
 set-text-color-variable
 echo -e "${YELLOW}s6 score:${NC}"
 
-#kubectl get pods -A --sort-by=.metadata.creationTimestamp | tail -n +2 | head -n 1
-#kubectl get pods -A --sort-by=.metadata.uid | tail -n +2 | head -n 1
-#echo "kubectl get pods -A --sort-by=.metadata.creationTimestamp" > /opt/course/5/find_pods.sh
-#echo "kubectl get pods -A --sort-by=.metadata.uid" > /opt/course/5/find_pods_uid.sh
+kubectl get pv -n project-tiger | grep '^safari-pv' | grep '2Gi' | grep 'RWO' | grep 'Bound' | grep 'project-tiger/safari-pvc' &> /dev/null && echo -e " [${GREEN}●${NC}] safari-pv currect." || echo -e " [${RED}●${NC}] safari-pv incurrect."
+kubectl get pvc -n project-tiger | grep '^safari-pvc' | grep '2Gi' | grep 'RWO' | grep 'Bound' &> /dev/null && echo -e " [${GREEN}●${NC}] safari-pvc currect." || echo -e " [${RED}●${NC}] safari-pvc incurrect."
 
-cat /opt/course/5/find_pods.sh | grep 'kubectl get pods -A --sort-by=.metadata.creationTimestamp' &> /dev/null && echo -e " [${GREEN}●${NC}] find_pods.sh currect." || echo -e " [${RED}●${NC}] find_pods.sh incurrect."
-cat /opt/course/5/find_pods_uid.sh | grep 'kubectl get pods -A --sort-by=.metadata.uid' &> /dev/null && echo -e " [${GREEN}●${NC}] find_pods_uid.sh currect." || echo -e " [${RED}●${NC}] find_pods_uid.sh incurrect."
+node_name=$(kubectl get po -n project-tiger -o wide | awk '{ print $7 }' | tail -n +2)
+ssh ${node_name} 'ls /Volumes/Data' &> /dev/null && echo -e " [${GREEN}●${NC}] hostPath currect." || echo -e " [${RED}●${NC}] hostPath incurrect."
