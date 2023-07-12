@@ -7,7 +7,7 @@ wget -q 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/ck
 source ~/bin/preprocess_function
 
 #Main program
-rm *.yaml $> /dev/null
+rm *.yaml &> /dev/null
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s1_cleanups' | bash
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s2_cleanups' | bash
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s3_cleanups' | bash

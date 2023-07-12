@@ -16,9 +16,9 @@ yaml=""
 set-text-color-variable
 echo -e "${YELLOW}s6 cleanups:${NC}"
 #刪除物件
-kubectl delete deploy safari -n ${target_namespace} $> /dev/null
-kubectl delete pvc safari-pvc -n ${target_namespace} $> /dev/null
-kubectl delete pv safari-pv -n ${target_namespace} $> /dev/null
+kubectl delete deploy safari -n ${target_namespace} &> /dev/null
+kubectl delete pvc safari-pvc -n ${target_namespace} &> /dev/null
+kubectl delete pv safari-pv -n ${target_namespace} &> /dev/null
 #檢查並建立 namespace
 namespace_detector=0
 kubectl get ns ${target_namespace} > /dev/null 2>&1 && namespace_detector=1
