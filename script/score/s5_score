@@ -15,8 +15,12 @@ yaml=""
 #Main program
 target_container_name=pod1-container
 set-text-color-variable
-echo -e "${YELLOW}s5 score:${NC}"
+echo -e "${YELLOW}s6 score:${NC}"
 
-#Check pod ready state
-kubectl get pod | grep 'ready-if-service-ready' | awk '{ print $2 }' | grep '1/1' &> /dev/null && echo -e " [${GREEN}●${NC}] pod ready-if-service-ready ready." || echo -e " [${RED}●${NC}] pod ready-if-service-ready not ready."
-kubectl get pod | grep 'am-i-ready' | awk '{ print $2 }' | grep '1/1' &> /dev/null && echo -e " [${GREEN}●${NC}] pod am-i-ready ready." || echo -e " [${RED}●${NC}] pod am-i-ready not ready."
+#kubectl get pods -A --sort-by=.metadata.creationTimestamp | tail -n +2 | head -n 1
+#kubectl get pods -A --sort-by=.metadata.uid | tail -n +2 | head -n 1
+#echo "kubectl get pods -A --sort-by=.metadata.creationTimestamp" > /opt/course/5/find_pods.sh
+#echo "kubectl get pods -A --sort-by=.metadata.uid" > /opt/course/5/find_pods_uid.sh
+
+cat /opt/course/5/find_pods.sh | grep 'kubectl get pods -A --sort-by=.metadata.creationTimestamp' &> /dev/null && echo -e " [${GREEN}●${NC}] find_pods.sh currect." || echo -e " [${RED}●${NC}] find_pods.sh incurrect."
+cat /opt/course/5/find_pods_uid.sh | grep 'kubectl get pods -A --sort-by=.metadata.uid' &> /dev/null && echo -e " [${GREEN}●${NC}] find_pods_uid.sh currect." || echo -e " [${RED}●${NC}] find_pods_uid.sh incurrect. "
