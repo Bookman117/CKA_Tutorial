@@ -15,7 +15,7 @@ yaml=""
 #Main program
 target_container_name=pod1-container
 set-text-color-variable
-echo -e "${YELLOW}s2 score:${NC}"
+echo -e "${YELLOW}s4 score:${NC}"
 
 #Check pod ready state
 kubectl get pod | grep 'ready-if-service-ready' | awk '{ print $2 }' | grep '1/1' &> /dev/null && echo -e " [${GREEN}●${NC}] pod ready-if-service-ready ready." || echo -e " [${RED}●${NC}] pod ready-if-service-ready not ready."

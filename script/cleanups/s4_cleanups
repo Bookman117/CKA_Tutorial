@@ -14,7 +14,7 @@ yaml="s3_preprocess"
 
 #Main program
 set-text-color-variable
-echo -e "${YELLOW}s3 cleanup:${NC}"
+echo -e "${YELLOW}s4 cleanup:${NC}"
 
 #檢查並刪除 object
 object_detector=0

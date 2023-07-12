@@ -15,6 +15,7 @@ curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cl
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s6_cleanups' | bash
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s7_cleanups' | bash
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s8_cleanups' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s9_cleanups' | bash
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s10_cleanups' | bash
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s11_cleanups' | bash
 curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cleanups/s12_cleanups' | bash
