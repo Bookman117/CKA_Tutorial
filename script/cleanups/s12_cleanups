@@ -14,7 +14,7 @@ yaml=""
 
 #Main program
 set-text-color-variable
-echo -e "${YELLOW}s11 preprocess:${NC}"
+echo -e "${YELLOW}s12 preprocess:${NC}"
 #檢查並建立 namespace
 namespace_detector=0
 kubectl get ns ${target_namespace} > /dev/null 2>&1 && namespace_detector=1

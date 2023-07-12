@@ -9,7 +9,7 @@ set-text-color-variable
 
 #Main program
 echo "test exam score result:"
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/score/s1_score' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/score/s2_score' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/score/s3_score' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/score/s4_score' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/score/s5_score' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/score/s6_score' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/score/s7_score' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/score/s8_score' | bash
