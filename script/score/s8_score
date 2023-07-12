@@ -17,7 +17,7 @@ target_container_name=pod1-container
 set-text-color-variable
 echo -e "${YELLOW}s8 score:${NC}"
 
-cat /opt/course/8/master-components.txt | grep 'kublet' | awk '{ print $2 }' | grep 'process'  &> /dev/null && echo -e " [${GREEN}●${NC}] kubelet currect." || echo -e " [${RED}●${NC}] kubelet incurrect."
+cat /opt/course/8/master-components.txt | grep 'kubelet' | awk '{ print $2 }' | grep 'process'  &> /dev/null && echo -e " [${GREEN}●${NC}] kubelet currect." || echo -e " [${RED}●${NC}] kubelet incurrect."
 cat /opt/course/8/master-components.txt | grep 'kube-apiserver' | awk '{ print $2 }' | grep 'static-pod'  &> /dev/null && echo -e " [${GREEN}●${NC}] kube-apiserver currect." || echo -e " [${RED}●${NC}] kube-apiserver incurrect."
 cat /opt/course/8/master-components.txt | grep 'kube-scheduler' | awk '{ print $2 }' | grep 'static-pod'  &> /dev/null && echo -e " [${GREEN}●${NC}] kube-scheduler currect." || echo -e " [${RED}●${NC}] kube-scheduler incurrect."
 cat /opt/course/8/master-components.txt | grep 'kube-controller-manager' | awk '{ print $2 }' | grep 'static-pod'  &> /dev/null && echo -e " [${GREEN}●${NC}] kube-controller-manager currect." || echo -e " [${RED}●${NC}] kube-controller-manager incurrect."

@@ -18,4 +18,4 @@ set-text-color-variable
 echo -e "${YELLOW}s7 score:${NC}"
 
 cat /opt/course/7/node.sh | grep 'kubectl top nodes' &> /dev/null && echo -e " [${GREEN}●${NC}] node.sh currect." || echo -e " [${RED}●${NC}] node.sh incurrect."
-cat /opt/course/7/pod.sh | grep 'kubectl top pods --containers=true' &> /dev/null && echo -e " [${GREEN}●${NC}] pod.sh currect." || echo -e " [${RED}●${NC}] pod.sh incurrect."
+cat /opt/course/7/pod.sh | grep 'kubectl top pod --containers=true' &> /dev/null && echo -e " [${GREEN}●${NC}] pod.sh currect." || echo -e " [${RED}●${NC}] pod.sh incurrect."
