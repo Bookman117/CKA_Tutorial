@@ -23,4 +23,4 @@ echo -e "${YELLOW}s6 score:${NC}"
 #echo "kubectl get pods -A --sort-by=.metadata.uid" > /opt/course/5/find_pods_uid.sh
 
 cat /opt/course/5/find_pods.sh | grep 'kubectl get pods -A --sort-by=.metadata.creationTimestamp' &> /dev/null && echo -e " [${GREEN}●${NC}] find_pods.sh currect." || echo -e " [${RED}●${NC}] find_pods.sh incurrect."
-cat /opt/course/5/find_pods_uid.sh | grep 'kubectl get pods -A --sort-by=.metadata.uid' &> /dev/null && echo -e " [${GREEN}●${NC}] find_pods_uid.sh currect." || echo -e " [${RED}●${NC}] find_pods_uid.sh incurrect. "
+cat /opt/course/5/find_pods_uid.sh | grep 'kubectl get pods -A --sort-by=.metadata.uid' &> /dev/null && echo -e " [${GREEN}●${NC}] find_pods_uid.sh currect." || echo -e " [${RED}●${NC}] find_pods_uid.sh incurrect."
