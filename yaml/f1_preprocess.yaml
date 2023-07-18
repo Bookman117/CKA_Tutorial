@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: scale-field
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: presentaion
+  namespace: scale-field
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: presentaion
+  template:
+    metadata:
+      labels:
+        app: presentaion
+    spec:
+      containers:
+      - name: presentaion
+        image: nginx
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loadbalabcer
+  namespace: scale-field
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: loadbalabcer
+  template:
+    metadata:
+      labels:
+        app: loadbalabcer
+    spec:
+      containers:
+      - name: loadbalabcer
+        image: nginx
