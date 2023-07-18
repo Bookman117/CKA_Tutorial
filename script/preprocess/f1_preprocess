@@ -9,8 +9,8 @@ target_namespace=""
 object=""
 object_name=""
 object_replicas=""
-yaml_path=~/
-yaml="f1_preprocess.yaml"
+yaml_path=https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/yaml/
+yaml="f1_preprocess"
 
 #Main program
 set-text-color-variable
