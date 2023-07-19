@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: label-field
+  namespace: label-field
+  labels:
+    name: cpu-loader
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpu-stress-test-1
+  namespace: label-field
+  labels:
+    name: cpu-loader
+spec:
+  containers:
+  - name: stress
+    image: progrium/stress
+    args: ["--cpu", "1", "--timeout", "600s"]
+    resources:
+      requests:
+        cpu: "100m"
+      limits:
+        cpu: "200m"
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpu-stress-test-2
+  namespace: label-field
+  labels:
+    name: cpu-loader
+spec:
+  containers:
+  - name: stress
+    image: progrium/stress
+    args: ["--cpu", "1", "--timeout", "600s"]
+    resources:
+      requests:
+        cpu: "200m"
+      limits:
+        cpu: "300m"
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpu-stress-test-3
+  namespace: label-field
+  labels:
+    name: cpu-loader
+spec:
+  containers:
+  - name: stress
+    image: progrium/stress
+    args: ["--cpu", "1", "--timeout", "600s"]
+    resources:
+      requests:
+        cpu: "400m"
+      limits:
+        cpu: "500m"
