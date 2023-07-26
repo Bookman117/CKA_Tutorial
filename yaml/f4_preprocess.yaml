@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: internal
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: outside
+  namespace: default
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80
+      name: http
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: inside-1
+  namespace: internal
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80
+      name: http
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: inside-2
+  namespace: internal
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80
+      name: http
