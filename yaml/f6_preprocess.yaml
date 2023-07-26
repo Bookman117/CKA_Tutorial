@@ -16,7 +16,7 @@ metadata:
 spec:
   containers:
   - name: stress
-    image: progrium/stress
+    image: docker.io/progrium/stress
     args: ["--cpu", "1", "--timeout", "600s"]
     resources:
       requests:
