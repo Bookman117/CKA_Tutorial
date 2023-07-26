@@ -11,7 +11,7 @@ metadata:
 spec:
   containers:
   - name: nginx
-    image: nginx
+    image: registry.cka.com/library/nginx
     ports:
     - containerPort: 80
       name: http
@@ -24,7 +24,7 @@ metadata:
 spec:
   containers:
   - name: nginx
-    image: nginx
+    image: registry.cka.com/library/nginx
     ports:
     - containerPort: 80
       name: http
@@ -37,7 +37,7 @@ metadata:
 spec:
   containers:
   - name: nginx
-    image: nginx
+    image: registry.cka.com/library/nginx
     ports:
     - containerPort: 80
       name: http
