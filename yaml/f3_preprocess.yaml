@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ing-internal
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hi
+  namespace: ing-internal
+  labels:
+    name: hi
+spec:
+  containers:
+  - name: nginx
+    image: quay.io/jitesoft/nginx
+    ports:
+    - containerPort: 80
+      name: http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hi
+  namespace: ing-internal
+  labels:
+    name: hi
+spec:
+  selector:
+    name: hi
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: http
+  sessionAffinity: None
+  type: ClusterIP
