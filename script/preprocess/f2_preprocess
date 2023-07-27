@@ -1,0 +1,30 @@
+#!/bin/bash
+#Purpose: CKA s2 environment preprocess
+#Create-Date: 2023-07-06
+
+#Variable
+ls ~/bin/cka_function &> /dev/null || wget -q 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cka_function' -O ~/bin/cka_function
+source ~/bin/cka_function
+target_namespace=""
+object=""
+object_name="ns/ing-internal | pod/hi | svc/hi"
+object_replicas=""
+yaml_path=https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/yaml/
+yaml="f3_preprocess"
+
+ETCD_VER=v3.5.7
+ETCD_DIR=etcd-download
+DOWNLOAD_URL=https://github.com/coreos/etcd/releases/download
+
+#Main program
+set-text-color-variable
+echo -e "${YELLOW}f2 preprocess:${NC}"
+
+#Download etcdctl
+mkdir ${ETCD_DIR}
+cd ${ETCD_DIR}
+wget ${DOWNLOAD_URL}/${ETCD_VER}/etcd-${ETCD_VER}-linux-amd64.tar.gz
+tar -xzvf etcd-${ETCD_VER}-linux-amd64.tar.gz
+#install etcdctl
+cd etcd-${ETCD_VER}-linux-amd64
+sudo cp etcdctl /usr/local/bin/
