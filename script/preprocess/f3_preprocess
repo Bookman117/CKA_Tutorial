@@ -26,4 +26,4 @@ while true
         kubectl get pod hi -n ing-internal --no-headers | grep "1/1   Running" &> /dev/null
         [ "${?}" == "0" ] && break
     done
-[ "${?}" == "0" ] && kubectl exec -it hi -n ing-internal -- sh -c "echo "hi" > index.html" && echo -e " [${GREEN}●${NC}] nginx index.html configured." || echo -e " [${RED}●${NC}] nginx index.html not configured."
+[ "${?}" == "0" ] && kubectl exec -it hi -n ing-internal -- sh -c "echo "hi" > index.html" 2> /dev/null && echo -e " [${GREEN}●${NC}] nginx index.html configured." || echo -e " [${RED}●${NC}] nginx index.html not configured."
