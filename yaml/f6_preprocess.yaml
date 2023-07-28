@@ -34,7 +34,7 @@ metadata:
 spec:
   containers:
   - name: stress
-    image: progrium/stress
+    image:  registry.cka.com/progrium/stress #progrium/stress
     args: ["--cpu", "1", "--timeout", "600s"]
     resources:
       requests:
@@ -52,7 +52,7 @@ metadata:
 spec:
   containers:
   - name: stress
-    image: progrium/stress
+    image:  registry.cka.com/progrium/stress #progrium/stress
     args: ["--cpu", "1", "--timeout", "600s"]
     resources:
       requests:
