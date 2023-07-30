@@ -7,7 +7,7 @@ ls ~/bin/cka_function &> /dev/null || wget -q 'https://raw.githubusercontent.com
 source ~/bin/cka_function
 target_namespace=""
 object=""
-object_name="ns/label-field | pod/cpu-stress-test-*"
+object_name="pod/big-corp-app"
 object_replicas=""
 yaml_path=https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/yaml/
 yaml="f7_preprocess"
