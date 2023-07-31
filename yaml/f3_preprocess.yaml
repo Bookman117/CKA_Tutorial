@@ -29,7 +29,7 @@ spec:
   selector:
     name: hi
   ports:
-  - port: 80
+  - port: 5678
     protocol: TCP
     targetPort: http
   sessionAffinity: None
