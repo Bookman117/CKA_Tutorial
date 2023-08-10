@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: corp-net
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: big-corp
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-1
+  namespace: corp-net
+spec:
+  containers:
+  - name: nginx
+    image: registry.cka.com/library/nginx
+    ports:
+    - containerPort: 80
+      name: http
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-2
+  namespace: big-corp
+spec:
+  containers:
+  - name: nginx
+    image: registry.cka.com/library/nginx
+    ports:
+    - containerPort: 80
+      name: http
