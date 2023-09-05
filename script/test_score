@@ -3,13 +3,13 @@
 #Create-Date: 2023-07-06
 
 #Variable
-wget -q 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cka_function' -O ~/bin/preprocess_function
+wget -q 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/cka_function' -O ~/bin/preprocess_function
 source ~/bin/preprocess_function
 set-text-color-variable
 
 #Main program
 echo "test exam score result:"
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/score/s5_score' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/score/s6_score' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/score/s7_score' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/score/s8_score' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/score/s5_score' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/score/s6_score' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/score/s7_score' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/score/s8_score' | bash

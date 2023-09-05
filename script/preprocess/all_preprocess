@@ -3,30 +3,30 @@
 #Create-Date: 2023-07-06
 
 #Variable
-wget -q 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cka_function' -O ~/bin/cka_function
+wget -q 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/cka_function' -O ~/bin/cka_function
 source ~/bin/cka_function
 
 #Main program
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/s1_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/s2_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/s3_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/s4_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/s5_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/s6_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/s7_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/s8_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/s10_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/s11_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/s12_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/s1_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/s2_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/s3_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/s4_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/s5_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/s6_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/s7_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/s8_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/s10_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/s11_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/s12_preprocess' | bash
 
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/f1_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/f2_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/f3_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/f4_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/f6_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/f7_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/f8_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/f10_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/f12_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/f14_preprocess' | bash
-curl -s 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/preprocess/f15_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/f1_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/f2_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/f3_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/f4_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/f6_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/f7_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/f8_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/f10_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/f12_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/f14_preprocess' | bash
+curl -s 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/preprocess/f15_preprocess' | bash

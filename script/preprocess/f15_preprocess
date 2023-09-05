@@ -3,13 +3,13 @@
 #Create-Date: 2023-07-06
 
 #Variable
-ls ~/bin/cka_function &> /dev/null || wget -q 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cka_function' -O ~/bin/cka_function
+ls ~/bin/cka_function &> /dev/null || wget -q 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/cka_function' -O ~/bin/cka_function
 source ~/bin/cka_function
 target_namespace=""
 object=""
 object_name="ns/app-team1"
 object_replicas=""
-yaml_path=https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/yaml/
+yaml_path=https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/yaml/
 yaml="f15_preprocess"
 
 #Main program

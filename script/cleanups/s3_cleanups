@@ -3,13 +3,13 @@
 #Create-Date: 2023-07-06
 
 #Variable
-ls ~/bin/cka_function &> /dev/null || wget -q 'https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/script/cka_function' -O ~/bin/cka_function
+ls ~/bin/cka_function &> /dev/null || wget -q 'https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/script/cka_function' -O ~/bin/cka_function
 source ~/bin/cka_function
 target_namespace="project-c13"
 object="sts"
 object_name="o3db"
 object_replicas=2
-yaml_path=https://raw.githubusercontent.com/Bookman-W/CKA_Tutorial/main/yaml/
+yaml_path=https://raw.githubusercontent.com/Bookman117/CKA_Tutorial/main/yaml/
 yaml="s3_preprocess"
 
 #Main program
